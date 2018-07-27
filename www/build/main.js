@@ -4,10 +4,9 @@ webpackJsonp([2],{
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PossibleProblemsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResultsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__results_results__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -19,30 +18,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var PossibleProblemsPage = /** @class */ (function () {
-    function PossibleProblemsPage(navCtrl) {
+/**
+ * Generated class for the ResultsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ResultsPage = /** @class */ (function () {
+    function ResultsPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.searchQuery = '';
-        this.initializeItems();
-    }
-    PossibleProblemsPage.prototype.initializeItems = function () {
+        this.navParams = navParams;
         this.items = [
             {
                 icon: '<i class="fas fa-battery-three-quarters"></i>',
                 title: 'Discharged Battery',
-                preview: 'A discharged battery is when internal chemical reaction reduces the stored charge in a battery. ',
-                pic: "assets/imgs/engine.jpg",
-                cost: "the average cost is $238",
-                desc: "The possible problems can lead to shortened battery life, Battery engine leak, and a reduced power of a battery.",
+                preview: 'A discharged battery is when internal chemical reaction reduces the stord charge in a battery. ',
+                pic: "assets/battery.jpg",
+                cost: "The average cost is $238",
+                desc: "The possible problems can lead to shortened battery life, battery engine leak, and a reduced power of battery.",
                 id: "battery"
             },
             {
                 icon: '<i class="fas fa-thermometer-three-quarters"></i>',
                 title: 'Broken Thermostat',
-                preview: 'A piece of a car between the engine and the radiator that reduces engine wear deposits and emissions.',
-                pic: "assets/imgs/engine.jpg",
-                cost: "the average cost is $204",
+                preview: 'A piece of a car between the engine and the radiator and it reduces engine war deposits and emissions',
+                pic: "assets/thermostat.jpg",
+                cost: "The average cost is $204",
                 desc: "The possible problems can lead to overheating, poor engine performance, and vibration when shifting gears.",
                 id: "thermostat"
             },
@@ -50,38 +51,32 @@ var PossibleProblemsPage = /** @class */ (function () {
                 icon: '<i class="fas fa-tint"></i>',
                 title: 'Leaking Coolant System',
                 preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
-                pic: "assets/imgs/engine.jpg",
-                cost: "the average cost is $80",
+                pic: "assets/coolant.jpg",
+                cost: "The average cost is $80",
                 desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
                 id: "coolant"
             }
         ];
-    };
-    PossibleProblemsPage.prototype.getItems = function (ev) {
-        // Reset items back to all of the items
-        this.initializeItems();
-        // set val to the value of the searchbar
-        var val = ev.target.value;
-        // if the value is an empty string don't filter the items
-        if (val && val.trim() != '') {
-            this.items = this.items.filter(function (item) {
-                return (item.id.toLowerCase().indexOf(val.toLowerCase()) > -1);
+        var id = this.navParams.get('id');
+        if (id && id.trim() != '') {
+            this.currentItem = this.items.filter(function (item) {
+                if (item.id === id) {
+                    return item;
+                }
             });
+            this.currentItem = this.currentItem[0];
         }
-    };
-    PossibleProblemsPage.prototype.clickItem = function (id) {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__results_results__["a" /* ResultsPage */], { id: id });
-    };
-    PossibleProblemsPage = __decorate([
+    }
+    ResultsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-possible-problems',template:/*ion-inline-start:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/possible-problems/possible-problems.html"*/'<!--\n  Generated template for the PossibleProblemsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Diagnostics</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <ion-list>\n    <ion-item class="car-item" *ngFor="let item of items" (click)="clickItem(item.id)">\n      <div>\n        <div class="icon" [innerHtml]="item.icon">\n        </div>\n        <div class="title">\n          <p>{{item.title}}</p>\n        </div>\n        <div class="preview">\n          <p>{{item.preview}}</p>\n        </div>\n      </div>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/possible-problems/possible-problems.html"*/,
+            selector: 'page-results',template:/*ion-inline-start:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/results/results.html"*/'<!--\n  Generated template for the ResultsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{currentItem.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="result-container">\n    <div class="img-container">\n      <img [src]="currentItem.pic" alt="">\n    </div>\n    <div class="title">\n      <p>{{currentItem.title}}</p>\n    </div>\n    <div class="avg-cost">\n      <h1>Average Cost:</h1>\n      <p>{{currentItem.cost}}</p>\n    </div>\n    <div class="desc">\n      <h1>The Problem:</h1>\n      <p>{{currentItem.desc}}</p>\n    </div>\n\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/results/results.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
-    ], PossibleProblemsPage);
-    return PossibleProblemsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    ], ResultsPage);
+    return ResultsPage;
 }());
 
-//# sourceMappingURL=possible-problems.js.map
+//# sourceMappingURL=results.js.map
 
 /***/ }),
 
@@ -107,11 +102,11 @@ webpackEmptyAsyncContext.id = 110;
 
 var map = {
 	"../pages/possible-problems/possible-problems.module": [
-		272,
+		271,
 		1
 	],
 	"../pages/results/results.module": [
-		271,
+		272,
 		0
 	]
 };
@@ -138,7 +133,7 @@ module.exports = webpackAsyncContext;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__possible_problems_possible_problems__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__possible_problems_possible_problems__ = __webpack_require__(99);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -245,8 +240,8 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(270);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_possible_problems_possible_problems__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_results_results__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_possible_problems_possible_problems__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_results_results__ = __webpack_require__(100);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -278,8 +273,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* MyApp */], {}, {
                     links: [
-                        { loadChildren: '../pages/results/results.module#ResultsPageModule', name: 'ResultsPage', segment: 'results', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/possible-problems/possible-problems.module#PossibleProblemsPageModule', name: 'PossibleProblemsPage', segment: 'possible-problems', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/possible-problems/possible-problems.module#PossibleProblemsPageModule', name: 'PossibleProblemsPage', segment: 'possible-problems', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/results/results.module#ResultsPageModule', name: 'ResultsPage', segment: 'results', priority: 'low', defaultHistory: [] }
                     ]
                 })
             ],
@@ -354,9 +349,10 @@ var MyApp = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResultsPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PossibleProblemsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__results_results__ = __webpack_require__(100);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -368,65 +364,69 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-/**
- * Generated class for the ResultsPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ResultsPage = /** @class */ (function () {
-    function ResultsPage(navCtrl, navParams) {
+
+var PossibleProblemsPage = /** @class */ (function () {
+    function PossibleProblemsPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
+        this.searchQuery = '';
+        this.initializeItems();
+    }
+    PossibleProblemsPage.prototype.initializeItems = function () {
         this.items = [
             {
                 icon: '<i class="fas fa-battery-three-quarters"></i>',
                 title: 'Discharged Battery',
-                preview: 'A discharged battery is when internal chemical reaction reduces the stord charge in a battery. ',
-                pic: "assets/battery.jpg",
-                cost: "The average cost is $238",
-                desc: "The possible problems can lead to shortened battery life, battery engine leak, and a reduced power of battery.",
+                preview: 'A discharged battery is when internal chemical reaction reduces the stored charge in a battery. ',
+                pic: "assets/imgs/engine.jpg",
+                cost: "the average cost is $238",
+                desc: "The possible problems can lead to shortened battery life, Battery engine leak, and a reduced power of a battery.",
                 id: "battery"
             },
             {
                 icon: '<i class="fas fa-thermometer-three-quarters"></i>',
                 title: 'Broken Thermostat',
-                preview: 'A piece of a car between the engine and the radiator and it reduces engine war deposits and emissions',
-                pic: "assets/thermostat.jpg",
-                cost: "The average cost is $204",
-                desc: "The possible problemscan lead to overheating, poor engine performance, and vibration when shifting gears.",
+                preview: 'A piece of a car between the engine and the radiator that reduces engine wear deposits and emissions.',
+                pic: "assets/imgs/engine.jpg",
+                cost: "the average cost is $204",
+                desc: "The possible problems can lead to overheating, poor engine performance, and vibration when shifting gears.",
                 id: "thermostat"
             },
             {
                 icon: '<i class="fas fa-tint"></i>',
                 title: 'Leaking Coolant System',
                 preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
-                pic: "assets/coolant.jpg",
-                cost: "The average cost is $80",
+                pic: "assets/imgs/engine.jpg",
+                cost: "the average cost is $80",
                 desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
                 id: "coolant"
             }
         ];
-        var id = this.navParams.get('id');
-        if (id && id.trim() != '') {
-            this.currentItem = this.items.filter(function (item) {
-                if (item.id === id) {
-                    return item;
-                }
+    };
+    PossibleProblemsPage.prototype.getItems = function (ev) {
+        // Reset items back to all of the items
+        this.initializeItems();
+        // set val to the value of the searchbar
+        var val = ev.target.value;
+        // if the value is an empty string don't filter the items
+        if (val && val.trim() != '') {
+            this.items = this.items.filter(function (item) {
+                return (item.id.toLowerCase().indexOf(val.toLowerCase()) > -1);
             });
-            this.currentItem = this.currentItem[0];
         }
-    }
-    ResultsPage = __decorate([
+    };
+    PossibleProblemsPage.prototype.clickItem = function (id) {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__results_results__["a" /* ResultsPage */], { id: id });
+    };
+    PossibleProblemsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-results',template:/*ion-inline-start:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/results/results.html"*/'<!--\n  Generated template for the ResultsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{currentItem.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="result-container">\n    <div class="img-container">\n      <img [src]="currentItem.pic" alt="">\n    </div>\n    <div class="title">\n      <p>{{currentItem.title}}</p>\n    </div>\n    <div class="avg-cost">\n      <h1>Average Cost:</h1>\n      <p>{{currentItem.cost}}</p>\n    </div>\n    <div class="desc">\n      <h1>The Problem:</h1>\n      <p>{{currentItem.desc}}</p>\n    </div>\n\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/results/results.html"*/,
+            selector: 'page-possible-problems',template:/*ion-inline-start:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/possible-problems/possible-problems.html"*/'<!--\n  Generated template for the PossibleProblemsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Diagnostics</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <ion-list>\n    <ion-item class="car-item" *ngFor="let item of items" (click)="clickItem(item.id)">\n      <div>\n        <div class="icon" [innerHtml]="item.icon">\n        </div>\n        <div class="title">\n          <p>{{item.title}}</p>\n        </div>\n        <div class="preview">\n          <p>{{item.preview}}</p>\n        </div>\n      </div>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/possible-problems/possible-problems.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-    ], ResultsPage);
-    return ResultsPage;
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+    ], PossibleProblemsPage);
+    return PossibleProblemsPage;
 }());
 
-//# sourceMappingURL=results.js.map
+//# sourceMappingURL=possible-problems.js.map
 
 /***/ })
 

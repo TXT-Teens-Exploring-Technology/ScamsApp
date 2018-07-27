@@ -30,7 +30,7 @@ export class ResultsPage {
       preview: 'A piece of a car between the engine and the radiator and it reduces engine war deposits and emissions',
       pic: "assets/thermostat.jpg",
       cost: "The average cost is $204",
-      desc: "The possible problemscan lead to overheating, poor engine performance, and vibration when shifting gears.",
+      desc: "The possible problems can lead to overheating, poor engine performance, and vibration when shifting gears.",
       id: "thermostat"
     },
     {

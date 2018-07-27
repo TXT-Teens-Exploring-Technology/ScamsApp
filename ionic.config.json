@@ -1,0 +1,7 @@
+{
+  "name": "singleStop",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

@@ -7,28 +7,38 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>{{currentItem.title}}</ion-title>
+    <ion-title>Problem</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <div class="result-container">
+    <h1 class="title">{{currentItem.title}}</h1>
     <div class="img-container">
-      <img [src]="currentItem.pic" alt="">
-    </div>
-    <div class="title">
-      <p>{{currentItem.title}}</p>
-    </div>
-    <div class="avg-cost">
-      <h1>Average Cost:</h1>
-      <p>{{currentItem.cost}}</p>
+        <img [src]="currentItem.pic" alt="">
     </div>
     <div class="desc">
-      <h1>The Problem:</h1>
-      <p>{{currentItem.desc}}</p>
+        <p>{{currentItem.desc}}</p>
     </div>
 
-  </div>
+    <ion-grid class="average-cost">
+        <ion-row>
+          <ion-col>
+            <p>Avergae Cost:</p>
+          </ion-col>
+          <ion-col>
+              <p>{{currentItem.cost}}</p>
+            </ion-col>
+        </ion-row>
+      </ion-grid>
 </ion-content>
+
+
+<ion-footer>
+    <ion-toolbar>
+      <ion-title>
+        <ion-icon name="ios-home-outline" (click)="home()"></ion-icon>
+      </ion-title>
+    </ion-toolbar>
+  </ion-footer>

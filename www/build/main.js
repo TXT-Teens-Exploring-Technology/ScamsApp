@@ -7,6 +7,7 @@ webpackJsonp([2],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResultsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -16,6 +17,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 /**
@@ -67,13 +69,17 @@ var ResultsPage = /** @class */ (function () {
             this.currentItem = this.currentItem[0];
         }
     }
+    ResultsPage.prototype.home = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__home_home__["a" /* HomePage */]);
+    };
     ResultsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-results',template:/*ion-inline-start:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/results/results.html"*/'<!--\n  Generated template for the ResultsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{currentItem.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div class="result-container">\n    <div class="img-container">\n      <img [src]="currentItem.pic" alt="">\n    </div>\n    <div class="title">\n      <p>{{currentItem.title}}</p>\n    </div>\n    <div class="avg-cost">\n      <h1>Average Cost:</h1>\n      <p>{{currentItem.cost}}</p>\n    </div>\n    <div class="desc">\n      <h1>The Problem:</h1>\n      <p>{{currentItem.desc}}</p>\n    </div>\n\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/results/results.html"*/,
+            selector: 'page-results',template:/*ion-inline-start:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/results/results.html"*/'<!--\n  Generated template for the ResultsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Problem</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n    <h1 class="title">{{currentItem.title}}</h1>\n    <div class="img-container">\n        <img [src]="currentItem.pic" alt="">\n    </div>\n    <div class="desc">\n        <p>{{currentItem.desc}}</p>\n    </div>\n\n    <ion-grid class="average-cost">\n        <ion-row>\n          <ion-col>\n            <p>Avergae Cost:</p>\n          </ion-col>\n          <ion-col>\n              <p>{{currentItem.cost}}</p>\n            </ion-col>\n        </ion-row>\n      </ion-grid>\n</ion-content>\n\n\n<ion-footer>\n    <ion-toolbar>\n      <ion-title>\n        <ion-icon name="ios-home-outline" (click)="home()"></ion-icon>\n      </ion-title>\n    </ion-toolbar>\n  </ion-footer>\n'/*ion-inline-end:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/results/results.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
     ], ResultsPage);
     return ResultsPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=results.js.map
@@ -102,11 +108,11 @@ webpackEmptyAsyncContext.id = 110;
 
 var map = {
 	"../pages/possible-problems/possible-problems.module": [
-		271,
+		270,
 		1
 	],
 	"../pages/results/results.module": [
-		272,
+		271,
 		0
 	]
 };
@@ -238,7 +244,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_status_bar__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(270);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_component__ = __webpack_require__(269);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_home_home__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_possible_problems_possible_problems__ = __webpack_require__(99);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_results_results__ = __webpack_require__(100);
@@ -299,7 +305,7 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 270:
+/***/ 269:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -353,6 +359,7 @@ var MyApp = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__results_results__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__home_home__ = __webpack_require__(195);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -362,6 +369,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -399,6 +407,33 @@ var PossibleProblemsPage = /** @class */ (function () {
                 cost: "the average cost is $80",
                 desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
                 id: "coolant"
+            },
+            {
+                icon: '<i class="fas fa-tint"></i>',
+                title: 'Leaking Coolant System',
+                preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
+                pic: "assets/imgs/engine.jpg",
+                cost: "the average cost is $80",
+                desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
+                id: "coolant"
+            },
+            {
+                icon: '<i class="fas fa-tint"></i>',
+                title: 'Leaking Coolant System',
+                preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
+                pic: "assets/imgs/engine.jpg",
+                cost: "the average cost is $80",
+                desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
+                id: "coolant"
+            },
+            {
+                icon: '<i class="fas fa-tint"></i>',
+                title: 'Leaking Coolant System',
+                preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
+                pic: "assets/imgs/engine.jpg",
+                cost: "the average cost is $80",
+                desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
+                id: "coolant"
             }
         ];
     };
@@ -417,13 +452,17 @@ var PossibleProblemsPage = /** @class */ (function () {
     PossibleProblemsPage.prototype.clickItem = function (id) {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__results_results__["a" /* ResultsPage */], { id: id });
     };
+    PossibleProblemsPage.prototype.home = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__home_home__["a" /* HomePage */]);
+    };
     PossibleProblemsPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-possible-problems',template:/*ion-inline-start:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/possible-problems/possible-problems.html"*/'<!--\n  Generated template for the PossibleProblemsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Diagnostics</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n  <ion-list>\n    <ion-item class="car-item" *ngFor="let item of items" (click)="clickItem(item.id)">\n      <div>\n        <div class="icon" [innerHtml]="item.icon">\n        </div>\n        <div class="title">\n          <p>{{item.title}}</p>\n        </div>\n        <div class="preview">\n          <p>{{item.preview}}</p>\n        </div>\n      </div>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/possible-problems/possible-problems.html"*/,
+            selector: 'page-possible-problems',template:/*ion-inline-start:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/possible-problems/possible-problems.html"*/'<!--\n  Generated template for the PossibleProblemsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Diagnostics</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n\n  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col *ngFor="let item of items" col-6>\n\n        <div class="car-item" (click)="clickItem(item.id)">\n          <div class="icon" [innerHtml]="item.icon">\n          </div>\n          <div class="title">\n            <p>{{item.title}}</p>\n          </div>\n        </div>\n\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n</ion-content>\n\n<ion-footer>\n  <ion-toolbar>\n    <ion-title>\n      <ion-icon name="ios-home-outline" (click)="home()"></ion-icon>\n    </ion-title>\n  </ion-toolbar>\n</ion-footer>'/*ion-inline-end:"/Users/txt-18/Desktop/ScamsApp-master 3/src/pages/possible-problems/possible-problems.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object])
     ], PossibleProblemsPage);
     return PossibleProblemsPage;
+    var _a;
 }());
 
 //# sourceMappingURL=possible-problems.js.map

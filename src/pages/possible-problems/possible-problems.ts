@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
 import { ResultsPage } from '../results/results';
+import { HomePage } from '../home/home';
 
 
 
@@ -63,6 +64,33 @@ export class PossibleProblemsPage {
         cost: "the average cost is $80",
         desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
         id: "coolant"
+      },
+      {
+        icon: '<i class="fas fa-tint"></i>',
+        title: 'Leaking Coolant System',
+        preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
+        pic: "assets/imgs/engine.jpg",
+        cost: "the average cost is $80",
+        desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
+        id: "coolant"
+      },
+      {
+        icon: '<i class="fas fa-tint"></i>',
+        title: 'Leaking Coolant System',
+        preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
+        pic: "assets/imgs/engine.jpg",
+        cost: "the average cost is $80",
+        desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
+        id: "coolant"
+      },
+      {
+        icon: '<i class="fas fa-tint"></i>',
+        title: 'Leaking Coolant System',
+        preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
+        pic: "assets/imgs/engine.jpg",
+        cost: "the average cost is $80",
+        desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
+        id: "coolant"
       }
     ]
   }
@@ -86,4 +114,8 @@ export class PossibleProblemsPage {
     this.navCtrl.push(ResultsPage, {id: id});
   }
 
+
+  home(){
+    this.navCtrl.setRoot(HomePage);
+  }
 }

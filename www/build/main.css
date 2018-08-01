@@ -25739,10 +25739,12 @@ page-home #submit {
   width: 150px;
   height: 50px;
   margin: auto;
-  background-color: #489BE7;
+  background-color: #fff;
+  border: solid thin #489BE7;
   color: white;
   margin-top: 45px;
   font-size: 20px;
+  color: #489BE7;
 }
 
 page-home .definition {
@@ -25756,7 +25758,7 @@ page-home #logo {
 }
 
 page-possible-problems ion-content, page-possible-problems .scroll-content {
-  padding: 16px 35px !important;
+  padding: 16px 0 !important;
 }
 
 page-possible-problems .toolbar-background {
@@ -25791,28 +25793,28 @@ page-possible-problems .car-item {
   padding: 10px 15px;
   background-color: #489BE7;
   margin-bottom: 25px;
+  -webkit-box-shadow: 5px 10px 5px rgba(182, 182, 182, 0.75);
+  box-shadow: 5px 10px 5px rgba(182, 182, 182, 0.75);
+  height: 115px;
 }
 
 page-possible-problems .car-item * {
   color: white !important;
 }
 
-page-possible-problems .car-item {
-  height: 185px;
-}
-
 page-possible-problems .icon {
+  margin-top: 12px;
   text-align: center;
   font-size: 32px;
 }
 
 page-possible-problems .title {
   text-align: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 page-possible-problems .title p {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -25827,8 +25829,20 @@ page-possible-problems .list-ios .item-block .item-inner {
   padding: 0 !important;
 }
 
+page-possible-problems .item-inner {
+  border: none !important;
+}
+
+page-possible-problems .col {
+  padding: 5px 15px !important;
+}
+
+page-results ion-title {
+  text-align: center;
+}
+
 page-results ion-content, page-results .scroll-content {
-  padding: 16px 20px !important;
+  padding: 16px 0 !important;
 }
 
 page-results .toolbar-background {
@@ -25855,7 +25869,7 @@ page-results .result-container * {
 
 page-results .img-container {
   width: 100%;
-  height: 175px;
+  height: 275px;
   overflow: hidden;
 }
 
@@ -25870,4 +25884,16 @@ page-results .title p {
   color: white;
   font-size: 21px;
   text-align: center;
+}
+
+page-results .title {
+  color: #489BE7;
+  text-align: center;
+}
+
+page-results .desc {
+  color: #489BE7;
+  padding: 10px 25px;
+  text-align: center;
+  font-size: 18px;
 }

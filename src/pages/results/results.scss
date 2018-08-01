@@ -1,6 +1,9 @@
 page-results {
+    ion-title{
+        text-align: center;
+    }
     ion-content, .scroll-content{
-        padding: 16px 20px !important;
+        padding: 16px 0 !important;
     }
     .toolbar-background{
         background-color: #489BE7;
@@ -24,7 +27,7 @@ page-results {
 
     .img-container{
         width: 100%;
-        height: 175px;
+        height: 275px;
         overflow: hidden;
     }
 
@@ -38,5 +41,16 @@ page-results {
         color: white;
         font-size: 21px;
         text-align: center;
+    }
+
+    .title{
+        color: #489BE7;
+        text-align: center;
+    }
+    .desc{
+        color: #489BE7;
+        padding: 10px 25px;
+        text-align: center;
+        font-size: 18px;
     }
 }

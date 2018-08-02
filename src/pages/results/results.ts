@@ -21,7 +21,8 @@ export class ResultsPage {
       title: 'Discharged Battery',
       preview: 'A discharged battery is when internal chemical reaction reduces the stord charge in a battery. ',
       pic: "assets/battery.jpg",
-      cost: "The average cost is $238",
+      cost: "Between $100",
+      cost2: "and $200",
       desc: "The possible problems can lead to shortened battery life, battery engine leak, and a reduced power of battery.",
       id: "battery"
     },
@@ -30,7 +31,8 @@ export class ResultsPage {
       title: 'Broken Thermostat',
       preview: 'A piece of a car between the engine and the radiator and it reduces engine war deposits and emissions',
       pic: "assets/thermostat.jpg",
-      cost: "The average cost is $204",
+      cost: "Between $170",
+      cost2: "and $208",
       desc: "The possible problems can lead to overheating, poor engine performance, and vibration when shifting gears.",
       id: "thermostat"
     },
@@ -39,7 +41,8 @@ export class ResultsPage {
       title: 'Leaking Coolant System',
       preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
       pic: "assets/coolant.jpg",
-      cost: "The average cost is $80",
+      cost: "Between $50",
+      cost2: "and $80",
       desc: "The possible problems can lead to overheating, excessive noise, and it will break your heater core.  ",
       id: "coolant"
     }

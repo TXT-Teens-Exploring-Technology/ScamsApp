@@ -39,8 +39,8 @@ export class PossibleProblemsPage {
   initializeItems() {
      this.items = [
       {
-        icon: '<i class="fas fa-battery-three-quarters"></i>',
-        title: 'Discharged Battery',
+        icon: '<img src="assets/probs/6.png"/>',
+        title: 'Dead Battery',
         preview: 'A discharged battery is when internal chemical reaction reduces the stored charge in a battery. ',
         pic: "assets/imgs/engine.jpg",
         cost: "the average cost is $238",
@@ -48,7 +48,7 @@ export class PossibleProblemsPage {
         id: "battery"
       },
       {
-        icon: '<i class="fas fa-thermometer-three-quarters"></i>',
+        icon: '<img src="assets/probs/2.png"/>',
         title: 'Broken Thermostat',
         preview: 'A piece of a car between the engine and the radiator that reduces engine wear deposits and emissions.',
         pic: "assets/imgs/engine.jpg",
@@ -57,7 +57,7 @@ export class PossibleProblemsPage {
         id: "thermostat"
       },
       {
-        icon: '<i class="fas fa-tint"></i>',
+        icon: '<img src="assets/probs/3.png"/>',
         title: 'Leaking Coolant System',
         preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
         pic: "assets/imgs/engine.jpg",
@@ -66,8 +66,8 @@ export class PossibleProblemsPage {
         id: "coolant"
       },
       {
-        icon: '<i class="fas fa-tint"></i>',
-        title: 'Leaking Coolant System',
+        icon: '<img src="assets/probs/4.png"/>',
+        title: 'Burnt Radiator',
         preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
         pic: "assets/imgs/engine.jpg",
         cost: "the average cost is $80",
@@ -75,8 +75,8 @@ export class PossibleProblemsPage {
         id: "coolant"
       },
       {
-        icon: '<i class="fas fa-tint"></i>',
-        title: 'Leaking Coolant System',
+        icon: '<img src="assets/probs/5.png"/>',
+        title: 'Broken Fuel Filter',
         preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
         pic: "assets/imgs/engine.jpg",
         cost: "the average cost is $80",
@@ -84,8 +84,8 @@ export class PossibleProblemsPage {
         id: "coolant"
       },
       {
-        icon: '<i class="fas fa-tint"></i>',
-        title: 'Leaking Coolant System',
+        icon: '<img src="assets/probs/1.png"/>',
+        title: 'Clogged Hose',
         preview: 'Green or orange liquid coming from a car may indicate a coolant leak',
         pic: "assets/imgs/engine.jpg",
         cost: "the average cost is $80",
